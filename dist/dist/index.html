@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>113</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<HTML>
+
+  <HEAD> 
+<TITLE>這是吳羽程標題</TITLE> <!---註：這是網頁主題--->
+</head>
+<body align="center">
+    <h1>期末專題***</h1>
+  <h2>專題簡介:</h2> 
+   <h3>***</h3>
+<hr>
+ <h2>-----(計數功能)-----</h2>
+  <h2 id="counter" >0</h2>
+  <button onclick="increment()">請輕輕按下滑鼠左鍵</button>
+  <video class="video-back" autoplay loop muted> <source src="https://wyc-cc.github.io/1/dist/3569294-uhd_3840_2160_24fps.mp4"> </video>
+</body>
+</html>
+<link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</HEAD>
+<H1> 心理學網</H1>
+ <BODY> 
+<a href="https://www.rssh.kh.edu.tw/index.php?WebID=238" target="_blank" title="123456">心理學</a>
+      
+ <hr><!----註：跑馬燈----->
+  <marquee direction="right" height="30" scrollamount="3" behavior="alternate" bgcolor="#B9B9FF"><img src="http://image.sciencenet.cn/album/201706/23/105713s7ic4675b64szza1.jpg" height=50>恐龍</marquee>
+      <hr>
+    </BODY> <!----註：從這裡是本文部份的結束 ----->
+
+</HTML>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>益智小遊戲 - 猜數字</title>
+<style>
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#game {
+  margin-top: 50px;
+}
+
+#result {
+  margin-top: 20px;
+  font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<h1>益智小遊戲 - 猜數字</h1>
+
+<div id="game">
+  <p>我已經想好了一個 1 到 100 之間的數字。</p>
+  <p>請輸入你猜的數字：</p>
+  <input type="number" id="guessInput">
+  <button onclick="checkGuess()">猜</button>
+  <p id="result"></p>
+  <p>已猜測次數: <span id="guessCount">0</span></p>
+</div>
+
+<script>
+  // 產生 1-100 的隨機數字
+  let secretNumber = Math.floor(Math.random() * 100) + 1;
+  let guessCount = 0;
+
+  function checkGuess() {
+    let guess = parseInt(document.getElementById("guessInput").value);
+    let resultElement = document.getElementById("result");
+    let guessCountElement = document.getElementById("guessCount");
+
+    guessCount++;
+    guessCountElement.textContent = guessCount;
+
+    if (isNaN(guess) || guess < 1 || guess > 100) {
+      resultElement.textContent = "請輸入 1 到 100 之間的數字。";
+      return;
+    }
+
+    if (guess === secretNumber) {
+      resultElement.textContent = "恭喜你猜對了！答案就是 " + secretNumber + "，你猜了" + guessCount + "次";
+      resultElement.style.color = "green";
+      document.getElementById("guessInput").disabled = true; // Disable input after correct guess
+      // Optionally, add a "Play Again" button
+    } else if (guess < secretNumber) {
+      resultElement.textContent = "太小了，再猜大一點。";
+      resultElement.style.color = "red";
+    } else {
+      resultElement.textContent = "太大了，再猜小一點。";
+      resultElement.style.color = "red";
+    }
+  }
+</script>
+
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
