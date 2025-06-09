@@ -7,8 +7,7 @@ var count = 0;
       counterElement.textContent = count;
     }
 
-const canvas = document.getElementById('gameCanvas');
-const ctx = canvas.getContext('2d');
+
 
 
    
